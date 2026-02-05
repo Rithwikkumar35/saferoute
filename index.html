@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SafeRoute — Smart disaster navigation. Find nearby shelters, report hazards, and navigate safely during emergencies.">
+    <meta name="theme-color" content="#0d6efd">
     <title>SafeRoute — Smart Disaster Navigation</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="images/logo.png" alt="SafeRoute" class="nav-logo-img">
+                <img src="images/logo.png" alt="SafeRoute logo" class="nav-logo-img">
                 <span class="nav-logo-text">SafeRoute</span>
             </div>
             <ul class="nav-menu">
@@ -24,19 +28,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <h1 class="hero-title">Smart Disaster Navigation</h1>
+            <h1 id="hero-title" class="hero-title">Smart Disaster Navigation</h1>
             <p class="hero-subtitle">Real-time guidance to safety during emergencies</p>
             <p class="hero-description">
                 Find nearby shelters, report hazards, and navigate safely with SafeRoute. 
                 Works offline. Trust local authorities.
             </p>
-            <button class="btn btn-primary btn-large" onclick="startNavigation()">
+            <button type="button" class="btn btn-primary btn-large" onclick="startNavigation()">
                 🗺️ Open Live Map
             </button>
         </div>
-        <div class="hero-graphic">
+        <div class="hero-graphic" aria-hidden="true">
             <div class="map-preview">
                 <div class="map-marker active"></div>
                 <div class="map-marker shelter"></div>
@@ -50,42 +54,32 @@
     <section id="features" class="features">
         <h2 class="section-title">Key Features</h2>
         <div class="features-grid">
-            <!-- Feature 1 -->
+            <!-- Feature cards unchanged -->
             <div class="feature-card">
                 <div class="feature-icon">📍</div>
                 <h3>Real-Time Location</h3>
                 <p>Get your current location and navigate to nearby shelters instantly with GPS precision.</p>
             </div>
-
-            <!-- Feature 2 -->
             <div class="feature-card">
                 <div class="feature-icon">🏠</div>
                 <h3>Find Shelters</h3>
                 <p>Discover nearby shelters, community centers, and safe zones with one click.</p>
             </div>
-
-            <!-- Feature 3 -->
             <div class="feature-card">
                 <div class="feature-icon">⚠️</div>
                 <h3>Report Hazards</h3>
                 <p>Alert your community about fires, floods, blocked roads, and other dangers.</p>
             </div>
-
-            <!-- Feature 4 -->
             <div class="feature-card">
                 <div class="feature-icon">🛣️</div>
                 <h3>Smart Routing</h3>
                 <p>Get optimal driving routes with real-time distance and arrival time estimates.</p>
             </div>
-
-            <!-- Feature 5 -->
             <div class="feature-card">
                 <div class="feature-icon">✓</div>
                 <h3>Safety Status</h3>
                 <p>Mark yourself as safe and inform your community that you're secure.</p>
             </div>
-
-            <!-- Feature 6 -->
             <div class="feature-card">
                 <div class="feature-icon">📵</div>
                 <h3>Works Offline</h3>
@@ -139,7 +133,7 @@
                         Built with open-source technology (OpenStreetMap, Leaflet), SafeRoute is free, transparent, and 
                         works anywhere in the world. No proprietary data, no subscription fees—just pure safety technology.
                     </p>
-                    <div class="about-stats">
+                    <div class="about-stats" aria-hidden="true">
                         <div class="stat">
                             <div class="stat-number">🌍</div>
                             <div class="stat-label">Global Coverage</div>
@@ -154,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
+                <div class="about-image" aria-hidden="true">
                     <div class="demo-phone">
                         <div class="phone-screen">
                             <div class="phone-map">
@@ -172,7 +166,7 @@
     <section class="cta">
         <h2>Ready to Navigate to Safety?</h2>
         <p>Start using SafeRoute in seconds. No registration needed.</p>
-        <button class="btn btn-primary btn-large" onclick="startNavigation()">
+        <button type="button" class="btn btn-primary btn-large" onclick="startNavigation()">
             Launch SafeRoute Now
         </button>
     </section>
@@ -187,15 +181,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
-            <p>&copy; 2025 SafeRoute. Free, open-source disaster navigation.</p>
+            <p>&copy; 2026 SafeRoute. Free, open-source disaster navigation.</p>
             <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">
                 Always verify emergency information with local authorities. SafeRoute complements, not replaces, official emergency services.
             </p>
+            <p style="margin-top:8px; font-size:0.85rem;"><a href="/LICENSE">License</a> · <a href="/README.md">Project</a></p>
         </div>
     </footer>
 
-    <script src="assets/home.js"></script>
+    <script src="assets/home.js" defer></script>
 </body>
 </html>
